@@ -134,7 +134,7 @@ export default function FocusRoomPage() {
   }
 
   return (
-    <div className={`min-h-screen bg-gradient-to-b ${cfg.bg} text-neutral-100 flex flex-col items-center justify-start pt-16 px-4 transition-all duration-1000`}>
+    <div className={`min-h-screen bg-linear-to-b ${cfg.bg} text-neutral-100 flex flex-col items-center justify-start pt-16 px-4 transition-all duration-1000`}>
       <div className="w-full max-w-md">
         <h1 className="text-center text-xl font-semibold text-neutral-400 mb-8 tracking-wide">Focus Room</h1>
 
