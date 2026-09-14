@@ -5,6 +5,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Focus Room — Pomodoro Timer & Ambient Sounds',
   description: 'A distraction-free focus timer with ambient soundscapes, task tracking, and Pomodoro technique support.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

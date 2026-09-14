@@ -136,7 +136,22 @@ export default function FocusRoomPage() {
   return (
     <div className={`min-h-screen bg-linear-to-b ${cfg.bg} text-neutral-100 flex flex-col items-center justify-start pt-16 px-4 transition-all duration-1000`}>
       <div className="w-full max-w-md">
-        <h1 className="text-center text-xl font-semibold text-neutral-400 mb-8 tracking-wide">Focus Room</h1>
+        <div className="flex flex-col items-center justify-center mb-8">
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-emerald-600 to-teal-500 p-0.5 shadow-xl shadow-emerald-600/30 flex items-center justify-center mb-3">
+            <svg className="w-full h-full p-2" viewBox="0 0 32 32" fill="none">
+              <circle cx="16" cy="16" r="10" stroke="#059669" strokeOpacity="0.4" strokeWidth="1.5"/>
+              <circle cx="16" cy="16" r="7" stroke="#34D399" strokeWidth="2" strokeLinecap="round" strokeDasharray="32 10"/>
+              <circle cx="16" cy="16" r="3" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <h1 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
+            Focus Room
+            <span className="text-[11px] px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-medium">
+              Zen
+            </span>
+          </h1>
+          <p className="text-xs text-slate-400 mt-1">Distraction-Free Pomodoro &amp; Ambient Soundscapes</p>
+        </div>
 
         {/* Phase selector */}
         <div className="flex rounded-xl bg-neutral-900/60 border border-neutral-800 p-1 mb-8">
