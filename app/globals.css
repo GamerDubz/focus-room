@@ -1,2 +1,100 @@
 @import "tailwindcss";
-* { box-sizing: border-box; }
+
+:root {
+  color-scheme: light;
+
+  /* Room: a warm, sage-tinted paper. Never pure white — that reads as UI, not a room. */
+  --color-bg: #f3efe6;
+  --color-bg-raised: #faf7f0;
+  --color-bg-sunken: #ece6d8;
+
+  --color-text: #3a342c;
+  --color-text-muted: #8a8172;
+  --color-text-faint: #b1a996;
+
+  --color-border: #e1d9c7;
+  --color-border-strong: #cfc4ab;
+
+  /* The one accent: a soft clay/terracotta, reserved for the active session. */
+  --color-clay: #b5583a;
+  --color-clay-strong: #9c4a30;
+  --color-clay-soft: #e9c9b9;
+  --color-clay-wash: rgba(181, 88, 58, 0.1);
+
+  --font-display: var(--font-quicksand), 'Quicksand', ui-rounded, system-ui, sans-serif;
+  --font-body: var(--font-nunito), 'Nunito', ui-rounded, system-ui, sans-serif;
+
+  --shadow-panel: 0 20px 60px -20px rgba(58, 52, 44, 0.35);
+  --focus-ring: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-clay);
+
+  --ease-room: cubic-bezier(0.34, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* A faint paper grain keeps the flat sage field from feeling like a slide
+   background — texture without pattern, atmosphere without decoration. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.5;
+  background-image: radial-gradient(rgba(58, 52, 44, 0.045) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+button,
+input {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: none;
+  border-radius: 6px;
+  box-shadow: var(--focus-ring);
+}
+
+::selection {
+  background: var(--color-clay-soft);
+  color: var(--color-clay-strong);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

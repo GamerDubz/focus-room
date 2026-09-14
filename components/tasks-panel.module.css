@@ -1,0 +1,140 @@
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.input {
+  flex: 1;
+  height: 44px;
+  padding: 0 0.875rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.input::placeholder {
+  color: var(--color-text-faint);
+}
+
+.input:focus-visible {
+  outline: none;
+  border-color: var(--color-clay);
+  box-shadow: 0 0 0 3px var(--color-clay-wash);
+}
+
+.addButton {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 1rem;
+  border-radius: 10px;
+  border: none;
+  background: var(--color-text);
+  color: var(--color-bg-raised);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.addButton:hover {
+  background: var(--color-clay-strong);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 8px;
+}
+
+.checkboxHit {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.checkbox {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border-strong);
+  display: grid;
+  place-content: center;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.checkbox::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-bg-raised);
+  transform: scale(0);
+  transition: transform 0.15s var(--ease-room);
+}
+
+.checkbox:checked {
+  border-color: var(--color-clay);
+  background: var(--color-clay);
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+.text {
+  flex: 1;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  word-break: break-word;
+}
+
+.textDone {
+  color: var(--color-text-faint);
+  text-decoration: line-through;
+}
+
+.deleteButton {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--color-text-faint);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.deleteButton:hover {
+  background: var(--color-bg-sunken);
+  color: var(--color-clay-strong);
+}
+
+.empty {
+  font-size: 0.875rem;
+  color: var(--color-text-faint);
+  padding: 0.5rem 0.25rem;
+}

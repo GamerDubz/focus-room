@@ -1,0 +1,170 @@
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text);
+}
+
+.brandMark {
+  color: var(--color-clay-strong);
+}
+
+.brandName {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.iconButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.iconButton:hover {
+  background: var(--color-bg-sunken);
+  color: var(--color-text);
+}
+
+.iconButtonOn {
+  color: var(--color-clay-strong);
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.25rem 2.5rem;
+  gap: 2.25rem;
+}
+
+.phaseSwitcher {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.phaseButton {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.125rem;
+  min-height: 44px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text-faint);
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.phaseButtonActive {
+  color: var(--color-text);
+}
+
+.phaseButtonActive::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-clay);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.primaryButton {
+  min-width: 160px;
+  height: 52px;
+  padding: 0 2rem;
+  border-radius: 26px;
+  border: none;
+  background: var(--color-text);
+  color: var(--color-bg-raised);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+
+.primaryButton:active {
+  transform: scale(0.97);
+}
+
+.primaryButtonRunning {
+  background: var(--color-clay);
+}
+
+.primaryButtonRunning:hover {
+  background: var(--color-clay-strong);
+}
+
+.primaryButton:not(.primaryButtonRunning):hover {
+  background: var(--color-clay-strong);
+}
+
+.secondaryButton {
+  min-width: 44px;
+  height: 52px;
+  padding: 0 1.25rem;
+  border-radius: 26px;
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-text-muted);
+  color: var(--color-text);
+}
+
+.footerNote {
+  font-size: 0.8125rem;
+  color: var(--color-text-faint);
+  text-align: center;
+  max-width: 30ch;
+}

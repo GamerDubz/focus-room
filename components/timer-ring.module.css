@@ -1,0 +1,84 @@
+.wrap {
+  position: relative;
+  width: clamp(240px, 62vw, 380px);
+  height: clamp(240px, 62vw, 380px);
+}
+
+.breathing {
+  animation: breathe 4.6s var(--ease-room) infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.028);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breathing {
+    animation: none;
+  }
+}
+
+.svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+  display: block;
+}
+
+.track {
+  fill: none;
+  stroke: var(--color-border-strong);
+  stroke-width: 3.5;
+}
+
+.progress {
+  fill: none;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke: var(--color-text);
+  transition: stroke-dashoffset 0.6s var(--ease-room), stroke 0.5s ease;
+}
+
+.progressActive {
+  stroke: var(--color-clay);
+}
+
+.center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.time {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.75rem, 11vw, 4.5rem);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1;
+  transition: color 0.5s ease;
+}
+
+.timeActive {
+  color: var(--color-clay);
+}
+
+.phaseLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}

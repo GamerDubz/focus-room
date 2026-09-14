@@ -1,0 +1,24 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-border-strong);
+}
+
+.dotFilled {
+  background: var(--color-clay);
+}
+
+.count {
+  margin-left: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
