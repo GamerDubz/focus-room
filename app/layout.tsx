@@ -1,17 +1,17 @@
 import type { Metadata, Viewport } from 'next'
-import { Quicksand, Nunito } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const quicksand = Quicksand({
-  subsets: ['latin'],
-  weight: ['500', '600', '700'],
+const quicksand = localFont({
+  src: './fonts/quicksand.ttf',
+  weight: '300 700',
   variable: '--font-quicksand',
   display: 'swap',
 })
 
-const nunito = Nunito({
-  subsets: ['latin'],
-  weight: ['400', '600', '700', '800'],
+const nunito = localFont({
+  src: './fonts/nunito.ttf',
+  weight: '200 1000',
   variable: '--font-nunito',
   display: 'swap',
 })
